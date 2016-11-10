@@ -39,8 +39,8 @@ public class FoF {
                 for(int k = j+1; k < list.size(); k++)
                 {
                     slist.clear();
-                    slist.add(list.get(j);
-                    slist.add(list.get(k);
+                    slist.add(list.get(j));
+                    slist.add(list.get(k));
                     Collections.sort(slist);
                     Text key = list.get(i) + " " + slist.get(0) + " " + slist.get(1);
                     word.set(key);
