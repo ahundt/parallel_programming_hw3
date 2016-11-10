@@ -16,9 +16,9 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 public class FoF {
 
   public static class TokenizerMapper
-       extends Mapper<Object, Text, Text, IntWritable>{
+       extends Mapper<Object, Text, Text, Text>{
 
-    private final static IntWritable one = new IntWritable(1);
+    private final static Text one = new Text("1");
     private Text word = new Text();
 
     public void map(Object key, Text value, Context context
