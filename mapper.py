@@ -12,8 +12,9 @@ for line in sys.stdin:
     wordcount = len(words)
 
     # increase counters
-    for i in xrange(wordcount):
-       for j in xrange(i+1,wordcount):
-         for k in xrange(j+1,wordcount):
-            s_list = [words[j], words[k]].sort()
-            print '<%s,%s,%s>\t%s' % ( words[i], s_list[0], s_list[1], 1)
+    if wordcount >= 3:
+        for i in xrange(wordcount):
+            for j in xrange(i+1,wordcount):
+                for k in xrange(j+1,wordcount):
+                    s_list = [words[j], words[k]].sort()
+                    print '<%s,%s,%s>\t%s' % ( words[i], s_list[0], s_list[1], 1)
