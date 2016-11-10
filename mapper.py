@@ -23,4 +23,4 @@ for line in sys.stdin:
                     slist = [words[j], words[k]]
                     slist.sort()
                     #print slist
-                    print '<%s,%s,%s>\t%s' % ( words[i], slist[0], slist[1], 1)
+                    print '%s %s %s\t%s' % ( words[i], slist[0], slist[1], 1)
