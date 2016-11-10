@@ -17,6 +17,6 @@ for line in sys.stdin:
             for j in xrange(i+1,wordcount):
                 for k in xrange(j+1,wordcount):
                     print words
-                    s_list = [words[j], words[k]].sort()
+                    slist = [words[j], words[k]].sort()
                     print slist
-                    print '<%s,%s,%s>\t%s' % ( words[i], s_list[0], s_list[1], 1)
+                    print '<%s,%s,%s>\t%s' % ( words[i], slist[0], slist[1], 1)
