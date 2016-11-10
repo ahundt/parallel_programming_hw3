@@ -45,7 +45,7 @@ hadoop jar ./FoF.jar FoF simple.input simple.output
 # hadoop fs -get simple.output ~/parallel
 
 
-
+# hadoop fs -cat /user/parallel/simple.output/part-r-00000
 
 
 

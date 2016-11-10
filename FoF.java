@@ -68,7 +68,7 @@ public class FoF {
             // TODO(ahundt) don't actually want to write the sum out! 
             // TODO(ahundt) Store current_word or current_count?
             result.set(key);
-            context.write(key, new Text(""));
+            context.write(key, key);
         }
       }
     }
