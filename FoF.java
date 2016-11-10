@@ -42,7 +42,7 @@ public class FoF {
                     slist.add(list.get(j));
                     slist.add(list.get(k));
                     Collections.sort(slist);
-                    Text keyout = list.get(i) + " " + slist.get(0) + " " + slist.get(1);
+                    Text keyout = new Text(list.get(i) + " " + slist.get(0) + " " + slist.get(1));
                     word.set(keyout);
                     Text oneOut("1");
                     context.write(word, oneOut);
