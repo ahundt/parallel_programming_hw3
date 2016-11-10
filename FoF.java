@@ -27,7 +27,7 @@ public class FoF {
       ArrayList<Text> list = new ArrayList<Text>();
       ArrayList<Text> slist = new ArrayList<Text>();
       while (itr.hasMoreTokens()) {
-          list.add(new Text(itr.nextToken());
+          list.add(new Text(itr.nextToken()));
       }
 
       if(list.size() >= 3)
