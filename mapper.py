@@ -19,7 +19,7 @@ for line in sys.stdin:
         for i in xrange(wordcount):
             for j in xrange(i+1,wordcount):
                 for k in xrange(j+1,wordcount):
-                    print 'test3'
+                    print 'test3, i:%d j:%d k:%d' % (i,j,k)
                     slist = [words[j], words[k]].sort()
                     print slist
                     print '<%s,%s,%s>\t%s' % ( words[i], slist[0], slist[1], 1)
