@@ -23,8 +23,8 @@ public class FoF {
     public void map(Object key, Text value, Context context
                     ) throws IOException, InterruptedException {
       StringTokenizer itr = new StringTokenizer(value.toString());
-      ArrayList<String> list = new ArrayList<String>();
-      ArrayList<String slist = new ArrayList<String();
+      ArrayList<Text> list = new ArrayList<Text>();
+      ArrayList<Text slist = new ArrayList<Text();
       while (itr.hasMoreTokens()) {
           list.add(itr.nextToken())
       }
@@ -41,7 +41,7 @@ public class FoF {
                     slist.add(list[j]);
                     slist.add(list[k]);
                     Collections.sort(slist);
-                    String key = list[i] + " " + slist[0] + " " + slist[1];
+                    Text key = list[i] + " " + slist[0] + " " + slist[1];
                     word.set(key);
                     context.write(word, one);
                 }
@@ -52,21 +52,21 @@ public class FoF {
   }
 
   public static class IntSumReducer
-       extends Reducer<Text,IntWritable,Text,IntWritable> {
-    private IntWritable result = new IntWritable();
+       extends Reducer<Text,Text,Text,Text> {
+    private Text result = new Text();
 
-    public void reduce(Text key, Iterable<IntWritable> values,
+    public void reduce(Text key, Iterable<Text> values,
                        Context context
                        ) throws IOException, InterruptedException {
       int sum = 0;
-      for (IntWritable val : values) {
+      for (Text val : values) {
         sum += val.get();
         if(sum == 2)
         {
             // TODO(ahundt) don't actually want to write the sum out! 
             // TODO(ahundt) Store current_word or current_count?
             result.set(sum);
-            context.write(key, result);
+            context.write(key, "");
         }
       }
     }
