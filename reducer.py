@@ -28,7 +28,7 @@ for line in sys.stdin:
     # by key (here: word) before it is passed to the reducer
     if current_word == word:
         current_count += count
-        if current_count == 1:
+        if current_count == 2:
             print '%s' % word
 
     else:
