@@ -11,12 +11,12 @@ for line in sys.stdin:
     words = line.split()
     wordcount = len(words)
 
+    print words
     # increase counters
     if wordcount >= 3:
         for i in xrange(wordcount):
             for j in xrange(i+1,wordcount):
                 for k in xrange(j+1,wordcount):
-                    print words
                     slist = [words[j], words[k]].sort()
                     print slist
                     print '<%s,%s,%s>\t%s' % ( words[i], slist[0], slist[1], 1)
