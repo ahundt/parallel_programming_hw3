@@ -44,7 +44,7 @@ public class FoF {
                     Collections.sort(slist);
                     Text keyout = new Text(list.get(i) + " " + slist.get(0) + " " + slist.get(1));
                     word.set(keyout);
-                    Text oneOut("1");
+                    Text oneOut = new Text("1");
                     context.write(word, oneOut);
                 }
             }
