@@ -24,7 +24,7 @@ public class FoF {
                     ) throws IOException, InterruptedException {
       StringTokenizer itr = new StringTokenizer(value.toString());
       ArrayList<Text> list = new ArrayList<Text>();
-      ArrayList<Text> slist = new ArrayList<Text();
+      ArrayList<Text> slist = new ArrayList<Text>();
       while (itr.hasMoreTokens()) {
           list.add(itr.nextToken());
       }
