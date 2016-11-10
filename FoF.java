@@ -42,9 +42,10 @@ public class FoF {
                     slist.add(list.get(j));
                     slist.add(list.get(k));
                     Collections.sort(slist);
-                    Text key = list.get(i) + " " + slist.get(0) + " " + slist.get(1);
-                    word.set(key);
-                    context.write(word, one);
+                    Text keyout = list.get(i) + " " + slist.get(0) + " " + slist.get(1);
+                    word.set(keyout);
+                    Text oneOut("1")
+                    context.write(word, oneOut);
                 }
             }
         }
@@ -61,7 +62,7 @@ public class FoF {
                        ) throws IOException, InterruptedException {
       int sum = 0;
       for (Text val : values) {
-        sum += val.get();
+        sum += 1;
         if(sum == 2)
         {
             // TODO(ahundt) don't actually want to write the sum out! 
