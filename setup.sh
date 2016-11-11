@@ -62,6 +62,7 @@ hadoop jar ./FoF.jar FoF simple.input simple.output
 
 
 # Update and run hadoop:
+  git pull && hadoop com.sun.tools.javac.Main FoF.java && jar cf FoF.jar FoF*.class && hadoop fs -rm -r /simple.output && hadoop jar ./FoF.jar FoF /simple.input /simple.output && hadoop fs -cat /simple.output/part-r-00000
 # git pull && hadoop com.sun.tools.javac.Main FoF.java && jar cf FoF.jar FoF*.class && hadoop fs -rm -r /user/parallel/simple.output && hadoop jar ./FoF.jar FoF simple.input simple.output
 
 # view my buckets when sshed onto the Hadoop instance using "gsutil ls"
@@ -79,3 +80,5 @@ hadoop jar ./FoF.jar FoF simple.input simple.output
 
 # WORDCOUNT TEST SCRIPT:
 # git pull && hadoop com.sun.tools.javac.Main WordCount.java && jar cf WordCount.jar WordCount*.class && hadoop fs -rm -r /user/parallel/simple.output && hadoop fs -rm -r /simple.output && hadoop jar ./WordCount.jar WordCount /simple.input /simple.output && hadoop fs -ls /
+
+

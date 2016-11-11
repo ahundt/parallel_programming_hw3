@@ -61,7 +61,6 @@ public class FoF {
                        Context context
                        ) throws IOException, InterruptedException {
       int sum = 0;
-      context.write(key, key);
       for (Text val : values) {
         sum += 1;
         if(sum == 2)
