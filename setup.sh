@@ -65,3 +65,17 @@ hadoop jar ./FoF.jar FoF simple.input simple.output
 # git pull && hadoop com.sun.tools.javac.Main FoF.java && jar cf FoF.jar FoF*.class && hadoop fs -rm -r /user/parallel/simple.output && hadoop jar ./FoF.jar FoF simple.input simple.output
 
 # view my buckets when sshed onto the Hadoop instance using "gsutil ls"
+
+
+
+
+
+
+
+
+
+
+
+
+# WORDCOUNT TEST SCRIPT:
+# git pull && hadoop com.sun.tools.javac.Main WordCount.java && jar cf WordCount.jar WordCount*.class && hadoop fs -rm -r /user/parallel/simple.output && hadoop jar ./WordCount.jar WordCount simple.input simple.output
