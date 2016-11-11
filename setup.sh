@@ -78,4 +78,4 @@ hadoop jar ./FoF.jar FoF simple.input simple.output
 
 
 # WORDCOUNT TEST SCRIPT:
-# git pull && hadoop com.sun.tools.javac.Main WordCount.java && jar cf WordCount.jar WordCount*.class && hadoop fs -rm -r /user/parallel/simple.output && hadoop jar ./WordCount.jar WordCount simple.input simple.output
+# git pull && hadoop com.sun.tools.javac.Main WordCount.java && jar cf WordCount.jar WordCount*.class && hadoop fs -rm -r /user/parallel/simple.output && hadoop fs -rm -r /simple.output && hadoop jar ./WordCount.jar WordCount /simple.input /simple.output && hadoop fs -ls /
