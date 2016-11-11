@@ -60,16 +60,15 @@ public class FoF {
     public void reduce(Text key, Iterable<Text> values,
                        Context context
                        ) throws IOException, InterruptedException {
+      Text empty = new Text("");
       int sum = 0;
       for (Text val : values) {
         sum += 1;
         if(sum == 2)
         {
-            // TODO(ahundt) don't actually want to write the sum out! 
-            // TODO(ahundt) Store current_word or current_count?
-            Text empty = new Text("");
             result.set(key);
             context.write(key, empty);
+            break;
         }
       }
     }
