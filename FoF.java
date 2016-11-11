@@ -61,15 +61,16 @@ public class FoF {
                        Context context
                        ) throws IOException, InterruptedException {
       int sum = 0;
+      context.write(key, key);
       for (Text val : values) {
         sum += 1;
-        if(sum == 2)
-        {
+        //if(sum == 2)
+        //{
             // TODO(ahundt) don't actually want to write the sum out! 
             // TODO(ahundt) Store current_word or current_count?
-            result.set(key);
-            context.write(key, key);
-        }
+            //result.set(key);
+            //context.write(key, key);
+        //}
       }
     }
   }
